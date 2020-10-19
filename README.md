@@ -1,3 +1,3 @@
 ## Polkadot Hackathon
 
-Deployed at https://vinhbhn.github.com/frontend-polkadot-hackathon
+Deployed at https://vinhbhn.github.io/frontend-polkadot-hackathon
