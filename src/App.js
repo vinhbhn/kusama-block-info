@@ -13,15 +13,23 @@ import { SubstrateContextProvider, useSubstrate } from "./substrate-lib";
 import { DeveloperConsole } from "./substrate-lib/components";
 
 import AccountSelector from "./AccountSelector";
+// import Balances from "./Balances";
 import BlockNumber from "./BlockNumber";
-
+// import Events from "./Events";
+// import Interactor from "./Interactor";
 import Metadata from "./Metadata";
 import NodeInfo from "./NodeInfo";
-import BlockInfo from "./BlockInfo";
+// import TemplateModule from "./TemplateModule";
+// import Transfer from "./Transfer";
+// import Upgrade from "./Upgrade";
 
 function Main() {
   const [accountAddress, setAccountAddress] = useState(null);
-  const { apiState, keyringState, apiError } = useSubstrate();
+  const { apiState, keyring, keyringState, apiError } = useSubstrate();
+  const accountPair =
+    accountAddress &&
+    keyringState === "READY" &&
+    keyring.getPair(accountAddress);
 
   const loader = (text) => (
     <Dimmer active>
