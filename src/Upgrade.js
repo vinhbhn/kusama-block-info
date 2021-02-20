@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { Form, Input, Grid } from 'semantic-ui-react';
 import { TxButton } from './substrate-lib/components';
 
-export default function Main (props) {
+export default function Main(props) {
   const [status, setStatus] = useState('');
   const [proposal, setProposal] = useState({});
   const { accountPair } = props;
 
-  const bufferToHex = buffer => {
+  const bufferToHex = (buffer) => {
     return Array.from(new Uint8Array(buffer))
-      .map(b => b.toString(16).padStart(2, '0'))
+      .map((b) => b.toString(16).padStart(2, '0'))
       .join('');
   };
 
-  const handleFileChosen = file => {
+  const handleFileChosen = (file) => {
     const fileReader = new FileReader();
-    fileReader.onloadend = e => {
+    fileReader.onloadend = (e) => {
       const content = bufferToHex(fileReader.result);
       setProposal(`0x${content}`);
     };
@@ -33,7 +33,7 @@ export default function Main (props) {
             id='file'
             label='Wasm File'
             accept='.wasm'
-            onChange={e => handleFileChosen(e.target.files[0])}
+            onChange={(e) => handleFileChosen(e.target.files[0])}
           />
         </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
@@ -46,7 +46,7 @@ export default function Main (props) {
               palletRpc: 'system',
               callable: 'setCode',
               inputParams: [proposal],
-              paramFields: [true]
+              paramFields: [true],
             }}
           />
         </Form.Field>

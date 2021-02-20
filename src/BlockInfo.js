@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Table, Grid } from "semantic-ui-react";
-import { useSubstrate } from "./substrate-lib";
+import React, { useEffect, useState } from 'react';
+import { Table, Grid } from 'semantic-ui-react';
+import { useSubstrate } from './substrate-lib';
 
 export default function BlockInfo() {
   const { api } = useSubstrate();
@@ -39,16 +39,16 @@ export default function BlockInfo() {
   return (
     <Grid.Column>
       <h1>Current Block Info</h1>
-      <Table celled striped size="small">
+      <Table celled striped size='small'>
         <Table.Body>
           <Table.Row>
-            <Table.Cell width={3} textAlign="center">
+            <Table.Cell width={3} textAlign='center'>
               Block Number
             </Table.Cell>
             <Table.Cell width={10}>{blockNumber}</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell width={3} textAlign="center">
+            <Table.Cell width={3} textAlign='center'>
               Hash
             </Table.Cell>
             <Table.Cell width={10}>
@@ -56,7 +56,7 @@ export default function BlockInfo() {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell width={3} textAlign="center">
+            <Table.Cell width={3} textAlign='center'>
               Parent Hash
             </Table.Cell>
             <Table.Cell width={10}>
@@ -64,7 +64,7 @@ export default function BlockInfo() {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell width={3} textAlign="center">
+            <Table.Cell width={3} textAlign='center'>
               State Root
             </Table.Cell>
             <Table.Cell width={10}>
@@ -72,7 +72,7 @@ export default function BlockInfo() {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell width={3} textAlign="center">
+            <Table.Cell width={3} textAlign='center'>
               Extrinsics Root
             </Table.Cell>
             <Table.Cell width={10}>
