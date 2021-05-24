@@ -1,3 +1,3 @@
-## Polkadot Hackathon
+## Kusama Block Info
 
-Deployed at https://vinhbhn.github.io/frontend-polkadot-hackathon
+Deployed at https://vinhbhn.github.io/kusama-block-info
