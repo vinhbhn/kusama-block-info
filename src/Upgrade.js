@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Input, Grid } from 'semantic-ui-react';
 import { TxButton } from './substrate-lib/components';
 
-export default function Main(props) {
+export default function Main (props) {
   const [status, setStatus] = useState('');
   const [proposal, setProposal] = useState({});
   const { accountPair } = props;
@@ -46,7 +46,7 @@ export default function Main(props) {
               palletRpc: 'system',
               callable: 'setCode',
               inputParams: [proposal],
-              paramFields: [true],
+              paramFields: [true]
             }}
           />
         </Form.Field>

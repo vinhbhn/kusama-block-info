@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Grid } from 'semantic-ui-react';
 import { useSubstrate } from './substrate-lib';
 
-export default function BlockInfo() {
+export default function BlockInfo () {
   const { api } = useSubstrate();
   const [blockNumber, setBlockNumber] = useState(0);
   const [block, setBlock] = useState({});

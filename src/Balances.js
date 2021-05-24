@@ -3,7 +3,7 @@ import { Table, Grid, Button } from 'semantic-ui-react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useSubstrate } from './substrate-lib';
 
-export default function Main(props) {
+export default function Main (props) {
   const { api, keyring } = useSubstrate();
   const accounts = keyring.getPairs();
   const [balances, setBalances] = useState({});
@@ -17,7 +17,7 @@ export default function Main(props) {
         const balancesMap = addresses.reduce(
           (acc, address, index) => ({
             ...acc,
-            [address]: balances[index].data.free.toHuman(),
+            [address]: balances[index].data.free.toHuman()
           }),
           {}
         );

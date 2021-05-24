@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Card, Icon, Grid } from "semantic-ui-react";
+import React, { useEffect, useState } from 'react';
+import { Card, Icon, Grid } from 'semantic-ui-react';
 
-import { useSubstrate } from "./substrate-lib";
+import { useSubstrate } from './substrate-lib';
 
-function Main(props) {
+function Main (props) {
   const { api, socket } = useSubstrate();
   const [nodeInfo, setNodeInfo] = useState({});
 
@@ -13,7 +13,7 @@ function Main(props) {
         const [chain, nodeName, nodeVersion] = await Promise.all([
           api.rpc.system.chain(),
           api.rpc.system.name(),
-          api.rpc.system.version(),
+          api.rpc.system.version()
         ]);
         setNodeInfo({ chain, nodeName, nodeVersion });
       } catch (e) {
@@ -41,7 +41,7 @@ function Main(props) {
   );
 }
 
-export default function NodeInfo(props) {
+export default function NodeInfo (props) {
   const { api } = useSubstrate();
   return api.rpc && api.rpc.system && api.rpc.system.chain && api.rpc.system.name && api.rpc.system.version
     ? (

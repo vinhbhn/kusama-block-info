@@ -4,7 +4,7 @@ import { Form, Input, Grid, Card, Statistic } from 'semantic-ui-react';
 import { useSubstrate } from './substrate-lib';
 import { TxButton } from './substrate-lib/components';
 
-function Main(props) {
+function Main (props) {
   const { api } = useSubstrate();
   const { accountPair } = props;
 
@@ -63,7 +63,7 @@ function Main(props) {
               palletRpc: 'templateModule',
               callable: 'doSomething',
               inputParams: [formValue],
-              paramFields: [true],
+              paramFields: [true]
             }}
           />
         </Form.Field>
@@ -73,9 +73,11 @@ function Main(props) {
   );
 }
 
-export default function TemplateModule(props) {
+export default function TemplateModule (props) {
   const { api } = useSubstrate();
-  return api.query.templateModule && api.query.templateModule.something ? (
+  return api.query.templateModule && api.query.templateModule.something
+    ? (
     <Main {...props} />
-  ) : null;
+      )
+    : null;
 }

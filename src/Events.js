@@ -6,10 +6,10 @@ import { useSubstrate } from './substrate-lib';
 // Events to be filtered from feed
 const FILTERED_EVENTS = [
   'system:ExtrinsicSuccess:: (phase={"ApplyExtrinsic":0})',
-  'system:ExtrinsicSuccess:: (phase={"ApplyExtrinsic":1})',
+  'system:ExtrinsicSuccess:: (phase={"ApplyExtrinsic":1})'
 ];
 
-function Main(props) {
+function Main (props) {
   const { api } = useSubstrate();
   const [eventFeed, setEventFeed] = useState([]);
 
@@ -40,9 +40,9 @@ function Main(props) {
               icon: 'bell',
               summary: `${eventName}-${e.length}`,
               extraText: event.meta.documentation.join(', ').toString(),
-              content: params.join(', '),
+              content: params.join(', ')
             },
-            ...e,
+            ...e
           ]);
         });
       });
@@ -74,9 +74,11 @@ function Main(props) {
   );
 }
 
-export default function Events(props) {
+export default function Events (props) {
   const { api } = useSubstrate();
-  return api.query && api.query.system && api.query.system.events ? (
+  return api.query && api.query.system && api.query.system.events
+    ? (
     <Main {...props} />
-  ) : null;
+      )
+    : null;
 }

@@ -6,7 +6,7 @@ import { TxButton, TxGroupButton } from './substrate-lib/components';
 
 const argIsOptional = (arg) => arg.type.toString().startsWith('Option<');
 
-function Main(props) {
+function Main (props) {
   const { api, jsonrpc } = useSubstrate();
   const { accountPair } = props;
   const [status, setStatus] = useState(null);
@@ -19,7 +19,7 @@ function Main(props) {
   const initFormState = {
     palletRpc: '',
     callable: '',
-    inputParams: [],
+    inputParams: []
   };
 
   const [formState, setFormState] = useState(initFormState);
@@ -76,21 +76,21 @@ function Main(props) {
           {
             name: metaType.asMap.key.toString(),
             type: metaType.asMap.key.toString(),
-            optional: false,
-          },
+            optional: false
+          }
         ];
       } else if (metaType.isDoubleMap) {
         paramFields = [
           {
             name: metaType.asDoubleMap.key1.toString(),
             type: metaType.asDoubleMap.key1.toString(),
-            optional: false,
+            optional: false
           },
           {
             name: metaType.asDoubleMap.key2.toString(),
             type: metaType.asDoubleMap.key2.toString(),
-            optional: false,
-          },
+            optional: false
+          }
         ];
       }
     } else if (interxType === 'EXTRINSIC') {
@@ -100,7 +100,7 @@ function Main(props) {
         paramFields = metaArgs.map((arg) => ({
           name: arg.name.toString(),
           type: arg.type.toString(),
-          optional: argIsOptional(arg),
+          optional: argIsOptional(arg)
         }));
       }
     } else if (interxType === 'RPC') {
@@ -114,7 +114,7 @@ function Main(props) {
         paramFields = metaParam.map((arg) => ({
           name: arg.name,
           type: arg.type,
-          optional: arg.isOptional || false,
+          optional: arg.isOptional || false
         }));
       }
     } else if (interxType === 'CONSTANT') {
@@ -136,7 +136,7 @@ function Main(props) {
         // Input parameter updated
         const {
           ind,
-          paramField: { type },
+          paramField: { type }
         } = state;
         const inputParams = [...formState.inputParams];
         inputParams[ind] = { type, value };
@@ -233,14 +233,16 @@ function Main(props) {
               value={inputParams[ind] ? inputParams[ind].value : ''}
               onChange={onPalletCallableParamChange}
             />
-            {paramField.optional ? (
+            {paramField.optional
+              ? (
               <Label
                 basic
                 pointing
                 color='teal'
                 content={getOptionalMsg(interxType)}
               />
-            ) : null}
+                )
+              : null}
           </Form.Field>
         ))}
         <Form.Field style={{ textAlign: 'center' }}>
@@ -252,7 +254,7 @@ function Main(props) {
               palletRpc,
               callable,
               inputParams,
-              paramFields,
+              paramFields
             }}
           />
         </Form.Field>
@@ -262,9 +264,9 @@ function Main(props) {
   );
 }
 
-function InteractorSubmit(props) {
+function InteractorSubmit (props) {
   const {
-    attrs: { interxType },
+    attrs: { interxType }
   } = props;
   if (interxType === 'QUERY') {
     return <TxButton label='Query' type='QUERY' color='blue' {...props} />;
@@ -277,7 +279,7 @@ function InteractorSubmit(props) {
   }
 }
 
-export default function Interactor(props) {
+export default function Interactor (props) {
   const { api } = useSubstrate();
   return api.tx ? <Main {...props} /> : null;
 }

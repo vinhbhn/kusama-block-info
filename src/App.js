@@ -5,7 +5,7 @@ import {
   Loader,
   Grid,
   Sticky,
-  Message,
+  Message
 } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -24,9 +24,10 @@ import BlockInfo from './BlockInfo';
 // import Transfer from "./Transfer";
 // import Upgrade from "./Upgrade";
 
-function Main() {
+function Main () {
   const [accountAddress, setAccountAddress] = useState(null);
   const { apiState, keyring, keyringState, apiError } = useSubstrate();
+  // eslint-disable-next-line no-unused-vars
   const accountPair =
     accountAddress &&
     keyringState === 'READY' &&
@@ -86,7 +87,7 @@ function Main() {
   );
 }
 
-export default function App() {
+export default function App () {
   return (
     <SubstrateContextProvider>
       <Main />
