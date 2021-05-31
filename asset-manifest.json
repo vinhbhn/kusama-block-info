@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/kusama-block-info/static/js/main.3a89c940.chunk.js",
-    "main.js.map": "/kusama-block-info/static/js/main.3a89c940.chunk.js.map",
+    "main.js": "/kusama-block-info/static/js/main.a7f9dbde.chunk.js",
+    "main.js.map": "/kusama-block-info/static/js/main.a7f9dbde.chunk.js.map",
     "runtime-main.js": "/kusama-block-info/static/js/runtime-main.0f13ae11.js",
     "runtime-main.js.map": "/kusama-block-info/static/js/runtime-main.0f13ae11.js.map",
-    "static/css/2.04b89059.chunk.css": "/kusama-block-info/static/css/2.04b89059.chunk.css",
-    "static/js/2.6e57f168.chunk.js": "/kusama-block-info/static/js/2.6e57f168.chunk.js",
-    "static/js/2.6e57f168.chunk.js.map": "/kusama-block-info/static/js/2.6e57f168.chunk.js.map",
+    "static/css/2.37e6c2c8.chunk.css": "/kusama-block-info/static/css/2.37e6c2c8.chunk.css",
+    "static/js/2.d963d226.chunk.js": "/kusama-block-info/static/js/2.d963d226.chunk.js",
+    "static/js/2.d963d226.chunk.js.map": "/kusama-block-info/static/js/2.d963d226.chunk.js.map",
     "index.html": "/kusama-block-info/index.html",
-    "static/css/2.04b89059.chunk.css.map": "/kusama-block-info/static/css/2.04b89059.chunk.css.map",
-    "static/js/2.6e57f168.chunk.js.LICENSE.txt": "/kusama-block-info/static/js/2.6e57f168.chunk.js.LICENSE.txt",
+    "static/css/2.37e6c2c8.chunk.css.map": "/kusama-block-info/static/css/2.37e6c2c8.chunk.css.map",
+    "static/js/2.d963d226.chunk.js.LICENSE.txt": "/kusama-block-info/static/js/2.d963d226.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/kusama-block-info/static/media/outline-icons.ddae9b1b.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.0f13ae11.js",
-    "static/css/2.04b89059.chunk.css",
-    "static/js/2.6e57f168.chunk.js",
-    "static/js/main.3a89c940.chunk.js"
+    "static/css/2.37e6c2c8.chunk.css",
+    "static/js/2.d963d226.chunk.js",
+    "static/js/main.a7f9dbde.chunk.js"
   ]
 }
