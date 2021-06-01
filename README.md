@@ -1,3 +1,3 @@
-## Kusama Block Info
+## Polkadot Block Info
 
-Deployed at https://vinhbhn.github.io/kusama-block-info
+Deployed at https://vinhbhn.github.io/polkadot-block-info
