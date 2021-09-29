@@ -35,15 +35,12 @@ function Main (props) {
             (data, index) => `${types[index].type}: ${data.toString()}`
           );
 
-          setEventFeed((e) => [
-            {
-              icon: 'bell',
-              summary: `${eventName}-${e.length}`,
-              extraText: event.meta.documentation.join(', ').toString(),
-              content: params.join(', ')
-            },
-            ...e
-          ]);
+          setEventFeed(e => [{
+            icon: 'bell',
+            summary: `${eventName}-${e.length}`,
+            extraText: event.meta.docs.join(', ').toString(),
+            content: params.join(', ')
+          }, ...e]);
         });
       });
     };
